@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+
+<body>
+     <form name="inputText" method="post" action="#" novalidate="true">
+          <label>Teléfono</label>
+          <input type="tel" name="telefono" placeholder="+XX XXX XXXXXX"><br>
+          <label>Email</label>
+          <input type="email" name="correo" placeholder="nombre@dominio.com"><br>
+          <label>Página web</label>
+          <input type="url" name="web" placeholder="https://pagina.com/"><br>
+     </form>
+     <form name="inputText" method="post" action="#" novalidate="true">
+          <label>Nombre de usuario</label>
+          <input type="text" name="nombre" placeholder="Por ejemplo, Juan"><br>
+          <!-- Campo de entrada de password -->
+          <label>Contraseña</label>
+          <input type="password" name="pass" placeholder="Contraseña"><br>
+          <input type="hidden" name="informacion" value="72625"><br>
+     </form>
+     <form name="camposEntrada" method="post" action="#" novalidate="true">
+          <textarea name="textoLargo" cols="80" rows="10" placeholder="Introduce la opinión del curso">
+          Este es el valor por defecto, no se usa value
+     </textarea>
+     </form>
+     <form name="formulario" method="post" action="#">
+          <!-- Número entre 5 y 50, de 5 en 5. Valor por defecto: 25 -->
+          <input type="number" name="numero" value="25" min="5" max="50" step="5" /><br>
+          <!-- Su misma versión, utilizando range -->
+          <input type="range" name="numrango" value="25" min="5" max="50" step="5" /><br>
+          <input type="submit" value="Enviar">
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <label>Selecciona una fecha</label>
+          <input type="date" name="fecha" min="2021-10-25" max="2022-08-25" step="2"><br>
+          <label>Selecciona una hora</label>
+          <input type="time" name="hora" min="18:00" max="21:00" step="3600"><br>
+          <label>Selecciona una fecha y hora</label>
+          <input type="datetime-local"><br>
+          <input type="submit" value="Enviar"><br>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <label>Hombre</label>
+          <input type="radio" name="sexo" value="hombre">
+          <label>Mujer</label>
+          <input type="radio" name="sexo" value="mujer">
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <select name="sistema">
+               <option value="ninguno">Selecciona tu SO</option>
+               <option value="windows">Windows</option>
+               <option value="linux">Linux</option>
+               <option value="osx">MacOS</option>
+               <option value="unix">Unix</option>
+          </select>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <select name="sistema" multiple>
+               <optgroup label="Windows">
+                    <option value="windows10" label="Windows 10"></option>
+                    <option value="windows8" label="Windows 8"></option>
+                    <option value="windows7" label="Windows 7"></option>
+                    <option value="windowsVista" label="Windows Vista"></option>
+                    <option value="windowsXP" label="Windows XP"></option>
+               </optgroup>
+               <optgroup label="Linux">
+                    <option value="windows10" label="Windows 10"></option>
+                    <option value="windows8" label="Windows 8"></option>
+                    <option value="windows7" label="Windows 7"></option>
+                    <option value="windowsVista" label="Windows Vista"></option>
+                    <option value="windowsXP" label="Windows XP"></option>
+               </optgroup>
+          </select>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <label>¿Qué navegador usas?:</label>
+          <input list="browsers" name="myBrowser">
+          <datalist id="browsers">
+               <option value="Chrome"></option>
+               <option value="Firefox"></option>
+               <option value="Internet Explorer"></option>
+               <option value="Opera"></option>
+               <option value="Safari"></option>
+               <option value="Microsoft Edge"></option>
+          </datalist>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <label>Selecciona un color: </label>
+          <input type="color" name="color" value="#F4F4F4">
+     </form>
+     <form name="formulario" method="post" action="/send.php" enctype="multipart/form-data">
+          <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <fieldset>
+               <legend>Registro</legend>
+               <input type="text" placeholder="usuario"><br>
+               <input type="password" placeholder="contraseña"><br>
+               <input type="submit">
+          </fieldset>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <progress value="50" max="100">50%</progress>
+     </form>
+     <form name="formulario" method="post" action="/send.php">
+          <meter min="0" max="100" value="91" low="50" high="90">
+     </form>
+</body>
+
+</html>
