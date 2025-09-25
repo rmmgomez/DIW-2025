@@ -1,45 +1,52 @@
-body {
-    background-color: #fdfaf6;
-    color: #4a4a4a;
-    font-family: Georgia, serif;
-}
-
-/* 1. */
+/* 1. SELECTOR UNIVERSAL (*) */
 /* Establece una base limpia para toda la página. */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;    
 }
 
-/* 2. */
-/* Aplica estilo a CUALQUIER <ul> que esté DENTRO de main. */
+body {
+    background-color: #fdfaf6;
+    color: #4a4a4a;
+}
+
+/* 2. SELECTOR DESCENDIENTE (espacio) */
+/* Aplica estilo a CUALQUIER <ul> que esté DENTRO de .contenido-principal. */
 /* Afectará tanto a la lista de monumentos en <article> como a la lista en <aside>. */
-main ul{
+.contenido-principal ul {
     list-style-type: square;
     margin-left: 20px;
     padding: 10px;
 }
 
-
-/* 3.  */
+/* 3. SELECTOR DE HIJO DIRECTO (>) */
 /* Aplica estilo SÓLO al <p> que es HIJO DIRECTO de <header>. */
 /* El párrafo de introducción del artículo NO se verá afectado. */
-header > p{
-
+header > p {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* 4. */
+/* 4. SELECTOR HERMANO ADYACENTE (+) */
 /* Selecciona SÓLO el PRIMER <p> que viene INMEDIATAMENTE DESPUÉS de un <h3>. */
 /* Esto es perfecto para estilizar el primer párrafo de una sección. */
-h3 + p{
-
+h3 + p {
+    font-size: 1.1em; /* Un poco más grande para destacar */
+    color: #005a8d;   /* Un tono de azul */
+    border-left: 4px solid #005a8d;
+    padding-left: 15px;
 }
 
-/* 5. */
+/* 5. SELECTOR HERMANO GENERAL (~) */
 /* Selecciona TODOS los <p> que son hermanos de <h3> y aparecen DESPUÉS. */
 /* En la sección de historia, afectará al párrafo "Otro párrafo..." pero no al primero (que ya tiene el estilo de 'h3 + p'). */
 /* También afectará al "párrafo suelto" y al párrafo de la sección de monumentos. */
-h3 ~ p{
-    
+h3 ~ p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
