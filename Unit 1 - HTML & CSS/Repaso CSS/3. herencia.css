@@ -5,7 +5,7 @@ body {
     border: 2px solid red;     
 }
 main {
-     border: inherit;
+    /* border: inherit; */
 }
 p{
     color: yellow;

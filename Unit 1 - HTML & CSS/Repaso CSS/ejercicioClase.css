@@ -1,0 +1,34 @@
+body {
+    background-color: #fdfaf6;
+    color: #4a4a4a;
+    font-family: Georgia, serif;
+}
+
+/* 1. */
+/* Establece una base limpia para toda la página. */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+/* 2. */
+/* Aplica estilo a CUALQUIER <ul> que esté DENTRO de main. */
+/* Afectará tanto a la lista de monumentos en <article> como a la lista en <aside>. */
+
+
+
+/* 3.  */
+/* Aplica estilo SÓLO al <p> que es HIJO DIRECTO de <header>. */
+/* El párrafo de introducción del artículo NO se verá afectado. */
+
+
+/* 4. */
+/* Selecciona SÓLO el PRIMER <p> que viene INMEDIATAMENTE DESPUÉS de un <h3>. */
+/* Esto es perfecto para estilizar el primer párrafo de una sección. */
+
+
+/* 5. */
+/* Selecciona TODOS los <p> que son hermanos de <h3> y aparecen DESPUÉS. */
+/* En la sección de historia, afectará al párrafo "Otro párrafo..." pero no al primero (que ya tiene el estilo de 'h3 + p'). */
+/* También afectará al "párrafo suelto" y al párrafo de la sección de monumentos. */
