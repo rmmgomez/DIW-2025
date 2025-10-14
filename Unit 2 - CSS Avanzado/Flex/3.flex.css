@@ -14,8 +14,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   
-  /* 1. Propiedad del Padre. Añade un espacio uniforme entre los ítems */
-  
+  /* 1. gap: Propiedad del Padre. Añade un espacio uniforme entre los ítems */
+  gap: 15px; 
   
   /* justify-content y align-items para centrado básico */
   justify-content: flex-start;
@@ -33,43 +33,45 @@ body {
     font-weight: bold;
     border: 2px solid #2980b9;
     
-    /* 2. Propiedades Flex (Valores por defecto para empezar) */
-    
+    /* Propiedades Flex (Valores por defecto para empezar) */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
   }
   
   /* Item A: Base */
   .item-A {
-    /* 2. Define el tamaño inicial del ítem antes de crecer o encogerse. */
-    
+    /* flex-basis: Define el tamaño inicial del ítem antes de crecer o encogerse. */
+    flex-basis: 150px;
   }
   
   /* Item B: Crece */
   .item-B {
     background-color: #e74c3c;
     color: white;
-    /* 3. Define la proporción de espacio libre que debe tomar el ítem. */
-    
+    /* flex-grow: Define la proporción de espacio libre que debe tomar el ítem. */
+    flex-grow: 3;
     flex-basis: 50px; /* Tamaño base muy pequeño, permitiendo más crecimiento. */
   }
   
   /* Item C: Reordenado y Alineación personalizada */
   .item-C {
     background-color: #f1c40f;
-    /* 4. Define el orden de aparición. Valores más bajos van primero. */
+    /* order: Define el orden de aparición. Valores más bajos van primero. */
+    order: -1;
     
-    
-    /* 5. Sobreescribe align-items del padre para este ítem. */
-    
+    /* align-self: Sobreescribe align-items del padre para este ítem. */
+    align-self: flex-start;
   }
   
   /* Item D: Encogimiento forzado y Alineación personalizada */
   .item-D {
     background-color: #27ae60;
     color: white;
-    /* 6. Mover este ítem al final. */
+    /* order: Mover este ítem al final. */
+    order: 99;
     
-    
-    /* 7. Sobreescribe align-items del padre para este ítem. */
-        
+    /* align-self: Sobreescribe align-items del padre para este ítem. */
+    align-self: flex-end;          
   }
 }

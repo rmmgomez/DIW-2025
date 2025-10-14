@@ -1,0 +1,62 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.miGrid {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    /* Grid de 4 columnas y 3 filas */
+    grid-template-columns: [col-start1]1fr [col-end1 col-start2]1fr [col-end2 col-start3]1fr [col-end3 col-start4]1fr[col-end4];
+    grid-template-rows: [fila-start1]100px [fila-end1 fila-start2]3fr [fila-end2 fila-start3]1fr [fila-end3 fila-start4]100px[fila-end4];
+    height: 100vh;
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: #333;
+        font-size: 1.2rem;
+    }
+
+    .header {
+        background-color: #4a90e2;
+        color: white;
+        grid-column: col-start1 / col-end4;
+        /* grid-column: 1 / 5; */
+        grid-row: fila-start1 / fila-end1;
+    }
+
+    .sidebar {
+        background-color: #34495e;
+        color: white;
+        grid-row: fila-start2 / fila-end3;
+    }
+
+    .main-content {
+        background-color: #f5a623;
+        grid-column: col-start2 / col-end4;
+    }
+
+    .card-1 {
+        background-color: #50e3c2;
+    }
+
+    .card-2 {
+        background-color: #bd10e0;
+        color: white;
+        grid-column: col-start3 / col-end4;
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        color: white;
+        grid-column: col-start1 / col-end4;
+    }
+}

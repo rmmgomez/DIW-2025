@@ -10,16 +10,17 @@ body {
 /* El Contenedor Padre de Flexbox */
 .flex-container {
   /* 1. Definir como contenedor Flex */
+  display: flex;     
+  /* 2. flex-direction: Define el eje principal (columna) y lo invierte */
+  flex-direction: column-reverse;
+  /* 3. flex-wrap: Permite que los ítems salten de línea (apilamiento) */
+  flex-wrap: wrap;
+  /* flex-flow:column-reverse wrap; */
+    /* 4. justify-content: Alinea los ítems en el Eje Principal (verticalmente) */
+  justify-content: center;
   
-  /* 2. Define el eje principal (columna) y lo invierte */
-  
-  /* 3. Permite que los ítems salten de línea (apilamiento) */
-  
-  /* 4. Alinea los ítems en el Eje Principal (verticalmente) */
-  
-  
-  /* 5. Alinea los ítems en el Eje Transversal (horizontalmente) */
-  
+  /* 5. align-items: Alinea los ítems en el Eje Transversal (horizontalmente) */
+  align-items: center;
   
   /* Estilos visuales del contenedor */
   width: 90vw;        /* Ocupa el 90% del ancho de la vista */
@@ -44,6 +45,15 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     
     /* Centrar contenido dentro del ítem (mini-flexbox) */
-
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.item8{ /* .flex-item.item8 */
+      order: -1;
+      align-self: flex-end;
+    }
+    &.item1{
+      order: 99;
+    }
+  }  
 }

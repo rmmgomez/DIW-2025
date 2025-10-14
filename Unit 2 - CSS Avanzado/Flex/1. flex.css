@@ -78,7 +78,7 @@ header h1 {
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: auto;
+            /* margin-top: auto; */
             /* Se asegura de que se alinee al final si hay espacio */
         }
 
