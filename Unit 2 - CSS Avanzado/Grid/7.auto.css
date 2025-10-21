@@ -1,0 +1,19 @@
+.container-row-auto {
+  display: grid;
+  grid-template-columns: 100px 100px; /* 2 columnas explícitas */
+  grid-template-rows: 50px;           /* 1 fila explícita de 50px de alto */
+  grid-auto-rows: 80px;               /* Las filas extra medirán 80px de alto */
+  gap: 10px;
+}
+
+.contenedor-column-auto {
+  display: grid;
+  grid-template-columns: 100px 100px; /* 2 columnas explícitas */
+  grid-auto-flow: column;             /* Ayuda a visualizar el flujo en columnas */
+  grid-auto-columns: 60px;            /* Las columnas extra medirán 60px de ancho */
+  gap: 10px;
+  .item-especial {
+  grid-column: 5; /* Forzamos a este elemento a ir a la 5ª columna */
+}
+}
+
