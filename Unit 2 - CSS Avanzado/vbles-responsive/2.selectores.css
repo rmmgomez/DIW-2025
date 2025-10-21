@@ -1,0 +1,5 @@
+/* main :is(.article1, .article2, .article3) */
+main .article1, main .article2, main .article3{
+    border: 1px solid red;
+    margin: 5px;
+}
