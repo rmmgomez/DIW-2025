@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de @container</title>
+    <link rel="stylesheet" href="container.css">
+</head>
+<body>
+
+    <h1>Ejemplo de <code>@container</code> de CSS</h1>
+    <p>Observa cómo el mismo componente <code>.card</code> se ve diferente en el contenedor azul (ancho) y en el rojo (estrecho).</p>
+
+    <main class="layout">
+
+        <div class="contenedor1">
+            <h2>Contenedor Ancho (700px)</h2>
+            
+            <div class="card">
+                <img src="https://www.nintendo.com/eu/media/images/10_share_images/portals_3/2x1_SuperMarioHub_image1600w.jpg" alt="Placeholder">
+                <div class="card-content">
+                    <h2>Diseño Horizontal</h2>
+                    <p>Este contenedor mide más de 400px, por lo que la <code>@container</code> query se activa y la tarjeta cambia a un diseño horizontal.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor2">
+            <h2>Contenedor Estrecho (350px)</h2>
+
+            <div class="card">
+                <img src="https://www.nintendo.com/eu/media/images/10_share_images/portals_3/2x1_SuperMarioHub_image1600w.jpg" alt="Placeholder">
+                <div class="card-content">
+                    <h2>Diseño Vertical</h2>
+                    <p>Este contenedor mide menos de 400px. La <code>@container</code> query no se activa, así que la tarjeta mantiene su diseño vertical por defecto.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

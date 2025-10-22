@@ -1,0 +1,83 @@
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f0f4f8;
+    padding: 2rem;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* multilinea */
+    gap: 2rem;
+}
+
+.contenedor1 {
+    width: 700px;
+    border: 2px dashed #007bff;
+    padding: 1rem;
+}
+
+.contenedor2 {
+    width: 350px;
+    border: 2px dashed #dc3545;
+    padding: 1rem;
+}
+
+.contenedor1,
+.contenedor2 {
+    container-type: inline-size;
+    /* solo nos importa su anchura. */
+}
+
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Bordes redondeados de ma img */
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .card-content {
+        padding: 1rem;
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #0056b3;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+/* cuando el contenedor padre más cercano tenga un ancho (min-width) de al menos 400px" */
+@container (min-width: 400px) {
+
+    .card {
+        display: flex;
+        /* Pasamos a horizontal */
+        align-items: center;
+
+        img {
+            width: 150px;
+            /* Ancho fijo para la imagen */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+    }
+}
