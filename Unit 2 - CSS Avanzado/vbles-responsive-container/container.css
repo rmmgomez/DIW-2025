@@ -68,7 +68,7 @@ main {
         display: flex;
         /* Pasamos a horizontal */
         align-items: center;
-
+        
         img {
             width: 150px;
             /* Ancho fijo para la imagen */
