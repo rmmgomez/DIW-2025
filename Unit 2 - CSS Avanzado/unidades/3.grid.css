@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header, footer{
+    background-color: aquamarine;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+@supports (not (display: grid)) and (display: flex) {
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    main{
+        flex-grow: 1;
+    }
+}
