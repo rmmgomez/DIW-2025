@@ -1,0 +1,15 @@
+@layer base, layout, components;
+@import url('base.css') layer(base);
+@import url('layout.css') layer(layout);
+@import url('components.css') ;
+
+button{
+    background-color: red;
+    border-radius: 2px;
+    filter: blur(10px);
+    transition: filter 2s;
+    &:hover{
+        
+        filter: blur(0px);
+    }
+}
