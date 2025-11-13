@@ -1,0 +1,19 @@
+.caja-tintada {
+    width: 400px;
+    height: 250px;
+
+    /* --- 1. Definimos DOS fondos --- */
+    background-image: url("https://picsum.photos/id/1062/400/250");
+    /* background-color: green; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* filter: blur(3px); */
+    background-blend-mode: multiply;
+}
+/* body{
+    background-image: url("https://www.nintendo.com/eu/media/images/08_content_images/others_2/characterhubs/supermariohub/MarioHub_Overview_Characters_sideimg_group.png");
+    mix-blend-mode: multiply;
+} */
